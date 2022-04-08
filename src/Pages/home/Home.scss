@@ -1,0 +1,32 @@
+.home{ 
+  
+
+    .widgets{
+        padding: 30px;
+        display: flex;
+        gap: 20px;
+    }
+
+
+    .charts{
+        display: flex;
+        gap: 20px;
+       padding: 0px 30px;
+
+        .summary{
+            flex:2.1;
+        }
+
+        .monthly-chart{
+            flex:5;
+        }
+    }
+
+
+
+
+
+
+
+
+}

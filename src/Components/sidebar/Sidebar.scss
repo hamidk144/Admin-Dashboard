@@ -1,0 +1,117 @@
+.sidebar {
+    background-color: #04293A;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 300px;
+    min-height: 100vh;
+    border-right: 0.5px solid rgb(218, 218, 218);
+    box-sizing: border-box;
+   
+
+    
+
+
+    .side-top {
+        display: flex;
+        align-items: center;
+        margin-top: 20px; 
+        height: 60px;
+        border-bottom: 1px solid grey;
+        padding-left: 25px;
+
+
+        .logo {
+            font-size: 23px;
+            font-weight: 600;
+            color: white; 
+            cursor: pointer;
+        }
+    }
+
+
+
+    .side-middle {
+       
+        
+        padding-bottom: 20px;
+
+
+        ul {
+            list-style: none;
+            padding: 0px;
+            cursor: pointer;
+
+           .navLink{
+               text-decoration: none;
+               
+               display: flex;
+              align-items: center;
+              padding: 5px 0px;
+              padding-left: 25px;
+
+              &.active{
+                background-color: #FF5151;
+                
+              }
+
+              .icon{ color:white; font-size: 22px; }
+              span{margin-left: 10px; color:white}
+
+              li{
+                display: flex;
+                align-items: center;
+              }
+
+           } 
+
+            
+            
+            .title {
+                color: rgb(231, 231, 231);
+                margin-top: 25px;
+                margin-bottom: 10px;
+                font-weight: 200;
+                border-bottom: 0.1px solid #cfd8df23;
+                padding-left: 25px;
+            }
+
+            
+          
+
+        }
+
+
+
+    }
+
+
+
+    .side-bottom {
+        
+        padding-top: 20px;
+        padding-left: 25px;
+        border-top: 1px solid grey;
+        display: flex;
+        height: 50px;
+
+        
+        .color-option{
+            margin: 5px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid grey;
+            border-radius: 6px;
+            cursor: pointer;
+            
+            &:nth-child(1){background-color: rgb(49, 49, 49); 
+            &:hover{border-color: #FF5151;}
+            }
+            &:nth-child(2){background-color: white;
+             &:hover{border-color: #FF5151;}
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,22 @@
+.UnderConstruction{
+   
+        min-height: 100vh;
+
+        h2{ display: flex;
+            align-items: center;
+            justify-content: center;
+        align-self: center;
+        margin-top: 30px;
+    color: rgb(223, 72, 102)}
+
+        .main-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin-top: 50px;
+        }
+    
+
+}
