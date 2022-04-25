@@ -1,4 +1,11 @@
 .orders{
+    display: flex;
+    width: 100vw;
+
+    .Main-content{
+
+        flex: 5;
+    }
 
     
 }

@@ -6,14 +6,18 @@ import './UnderConstruction.scss'
 const UnderConstruction = () => {
   return (
     <div className='UnderConstruction'>
+
+      <Sidebar/>
         
+        <div className="Main-content">
+          <Navbar/>
         <h2>Sorry, Under Construction</h2>
             <div className='main-content'>
                
             <img src={require('./underconstruction.gif')}  alt="underConstruction" />
 
             </div>
-       
+            </div>
         </div>
   )
 }

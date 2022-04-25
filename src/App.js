@@ -21,21 +21,16 @@ import { DarkContext } from "./Context/DarkModeContext";
 
 function App() {
 
-  const {DarkMode} = useContext(DarkContext);
+  const { DarkMode } = useContext(DarkContext);
   return (
 
-    <div className={DarkMode? "App Dark": "App Light"}>
+    <div className={DarkMode ? "App Dark" : "App Light"}>
       <BrowserRouter>
+        <Routes>
 
-        <Sidebar />
-
-        <div className="Main-content">
-           
-           <Navbar/>
-
-          <Routes>
+          <Route path="/login" element={<Login />} />
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
+
 
             <Route path="/users" element={<List title="USERS LIST" table='userstable' />} />
             <Route path="/users/:id" element={<SingleUser />} />
@@ -47,11 +42,9 @@ function App() {
             <Route path="/UnderConstruction/:id" element={<UnderConstruction />} />
             <Route path="/orders" element={<Orders />} />
 
-
-          </Routes>
-
-        </div>
-
+            </Routes>
+          
+       
       </BrowserRouter>
     </div>
 

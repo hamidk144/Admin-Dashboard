@@ -8,9 +8,16 @@ import './List.scss';
 const List = ({title, table}) => {
   return (
     <div className='list'>
-      
+
+    <Sidebar/>
+      <div className='Main-content' >
+
+        <Navbar/>
+        
           <DataTable title={title} table={table} />
 
+      </div>
+      
 
     </div>
   )

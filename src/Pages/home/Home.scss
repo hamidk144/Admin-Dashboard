@@ -1,6 +1,10 @@
 .home{ 
+display: flex;
+width: 100vw;
+   
+.Main-content{
+   flex: 5;
   
-
     .widgets{
         padding: 30px;
         display: flex;
@@ -23,7 +27,7 @@
     }
 
 
-
+}
 
 
 

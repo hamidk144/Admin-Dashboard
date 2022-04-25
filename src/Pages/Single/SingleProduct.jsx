@@ -5,75 +5,79 @@ import Navbar from '../../Components/navbar/Navbar';
 import { useParams } from "react-router-dom";
 import OrdersTable from "../../Components/OrdersTable/OrdersTable";
 
-import {productsRows} from "../../ProductsTableData"
+import { productsRows } from "../../ProductsTableData"
 
 
 
 
 const SingleProduct = () => {
 
-let {id}= useParams();
-console.log(id);
+  let { id } = useParams();
+  console.log(id);
 
 
 
   return (
 
-   
     <div className="single">
-    
-{productsRows.map((data,index)=>{
-  if(data.id==id){
-  return(
+      <Sidebar />
 
-        <div className="top">
-          <div className="Singleleft">
-            <div className="editButton">Edit</div>
-            <h1 className="title">INFORMATION</h1>
-            <div className="item">
-              <img
-                src={data.img}
-                alt=""
-                className="itemImg"
-              />
-              <div className="details">
-                <h1 className="itemTitle">{data.productname}</h1>
-                <div className="detailItem">
-                  <span className="itemKey">Category:</span>
-                  <span className="itemValue">{data.category}</span>
+      <div className="Main-content">
+        <Navbar />
+
+
+        {productsRows.map((data, index) => {
+          if (data.id == id) {
+            return (
+
+              <div className="top">
+                <div className="Singleleft">
+                  <div className="editButton">Edit</div>
+                  <h1 className="title">INFORMATION</h1>
+                  <div className="item">
+                    <img
+                      src={data.img}
+                      alt=""
+                      className="itemImg"
+                    />
+                    <div className="details">
+                      <h1 className="itemTitle">{data.productname}</h1>
+                      <div className="detailItem">
+                        <span className="itemKey">Category:</span>
+                        <span className="itemValue">{data.category}</span>
+                      </div>
+                      <div className="detailItem">
+                        <span className="itemKey">Status:</span>
+                        <span className="itemValue">{data.status}</span>
+                      </div>
+                      <div className="detailItem">
+                        <span className="itemKey">Price:</span>
+                        <span className="itemValue">
+                          {data.price}
+                        </span>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
-                <div className="detailItem">
-                  <span className="itemKey">Status:</span>
-                  <span className="itemValue">{data.status}</span>
-                </div>
-                <div className="detailItem">
-                  <span className="itemKey">Price:</span>
-                  <span className="itemValue">
-                  {data.price}
-                  </span>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-          <span className="right">
-            <MonthlyChart aspect={2.2 / 1} title="USER SPENDINGS (LAST 8 MONTHS)"  />
-          </span>
-        </div>)
-        }
+                <span className="right">
+                  <MonthlyChart aspect={2.2 / 1} title="USER SPENDINGS (LAST 8 MONTHS)" />
+                </span>
+              </div>)
+          }
         })}
         <div className="bottom">
 
-          <OrdersTable/>
+          <OrdersTable />
         </div>
-       
-    
-    </div>
+        </div>
+
+      </div>
 
 
-  );
+      );
 
 
 };
 
-export default SingleProduct;
+      export default SingleProduct;

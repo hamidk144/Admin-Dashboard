@@ -10,7 +10,11 @@ const New = ({ inputs, title }) => {
   return (
     <div className="new">
      
-      
+      <Sidebar/>
+
+      <div className="Main-content">
+
+      <Navbar/>
         <div className="new-top">
           <h1>{title}</h1>
         </div>
@@ -49,7 +53,7 @@ const New = ({ inputs, title }) => {
             </form>
           </div>
         </div>
-    
+        </div>
     </div>
   );
 };

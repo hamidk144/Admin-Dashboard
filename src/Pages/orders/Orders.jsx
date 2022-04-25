@@ -7,12 +7,15 @@ import './Orders.scss';
 const Orders = () => {
   return (
     <div className='orders' >
-   
-   <div className='orders-history'>
-    <OrdersTable type='full-list'/>
-   </div>
+      <Sidebar />
+      <div className="Main-content">
+        <Navbar />
 
-    
+        <div className='orders-history'>
+          <OrdersTable type='full-list' />
+        </div>
+
+      </div>
     </div>
   )
 }

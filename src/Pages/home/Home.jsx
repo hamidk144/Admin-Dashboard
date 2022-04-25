@@ -11,7 +11,10 @@ import './Home.scss';
 const Home = () => {
   return (
     <div className='home'>
-   
+    <Sidebar/>
+
+    <div className='Main-content'>
+      <Navbar/>
       
         <div className='widgets'>
           <Widget type="user" />
@@ -35,8 +38,7 @@ const Home = () => {
         <OrdersTable/>
 
 
-
-    
+        </div>
     </div>
   )
 }

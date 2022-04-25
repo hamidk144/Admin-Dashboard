@@ -1,4 +1,9 @@
   .new {
+    display: flex;
+    width: 100vw;
+
+    .Main-content{
+      flex: 5;
   
       .new-top,
       .new-bottom {
@@ -79,4 +84,5 @@
           }
         }
       }
+    }
   }
