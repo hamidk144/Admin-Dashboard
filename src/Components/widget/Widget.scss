@@ -7,7 +7,7 @@
     box-shadow: 2px 4px 10px 1px rgba(199, 199, 199, 0.75);
 -webkit-box-shadow: 2px 4px 10px 1px rgba(223, 223, 223, 0.75);
 -moz-box-shadow: 2px 4px 10px 1px rgba(223, 223, 223, 0.75);
-height: 120px;
+height: 140px;
 background-color: white;
 
 .left{
@@ -28,4 +28,17 @@ background-color: white;
     .icon-container{ align-self: flex-end; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;  
     .icon{border-radius: 6px; padding: 4px;}}
 }
+
+.percentage {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    &.positive {
+      color: green;
+    }
+    &.negative {
+      color: red;
+    }
+  }
 }

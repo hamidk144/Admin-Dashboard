@@ -27,7 +27,7 @@ function App() {
 
   const { DarkMode } = useContext(DarkContext);
   const {currentUser} = useContext(AuthContext);
-  console.log(currentUser);
+  
 
   const RequireAuth = ({children})=>{
       return currentUser? children: <Navigate to="/login" />
@@ -54,7 +54,7 @@ function App() {
 
             <Route path="/users/new/:id" element={
             <RequireAuth>
-              <New inputs={userInputs} title='Add New User' />
+              <New inputs={userInputs} type='User' />
               </RequireAuth>} />
 
             <Route path="/products" element={
@@ -68,7 +68,7 @@ function App() {
                </RequireAuth>} />
             <Route path="/products/new/:id" element={
             <RequireAuth>
-              <New inputs={productInputs} title='Add New Product' />
+              <New inputs={productInputs}  type='Product' />
               </RequireAuth>} />
 
             <Route path="/UnderConstruction/:id" element={

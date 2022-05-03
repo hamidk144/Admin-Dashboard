@@ -80,6 +80,11 @@
               font-weight: bold;
               cursor: pointer;
               margin-top: 10px;
+
+              &:disabled{
+                background-color: #ff515188;
+                cursor: not-allowed;
+              }
             }
           }
         }
