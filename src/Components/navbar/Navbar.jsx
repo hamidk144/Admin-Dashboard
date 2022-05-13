@@ -7,7 +7,7 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import LightModeIcon from '@mui/icons-material/LightMode';
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import { DarkContext } from "../../Context/DarkModeContext";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -17,6 +17,8 @@ import SearchIcon from "@mui/icons-material/Search";
 
 const Navbar = () => {
   const {dispatch, DarkMode} = useContext(DarkContext);
+  const [query, setQuery]= useState('');
+console.log(query);
 
   return (
     <div className="navbar">
@@ -37,6 +39,7 @@ const Navbar = () => {
         type="text"
         size="medium"
         className="search"
+        onChange={(e)=> setQuery(e.target.value)}
           sx={{
             "& input": {
               paddingTop: "6px",

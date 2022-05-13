@@ -35,6 +35,14 @@ const DataTable = ({ title, table }) => {
 
 
 
+  const search=(data)=>{
+    return(
+      data.filter(user=> 
+          user.email.includes()
+      )
+    )
+    }
+
 
   useEffect(() => {
 
